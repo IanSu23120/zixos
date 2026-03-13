@@ -17,7 +17,8 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    nerd-fonts.caskaydia-mono
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
   ];
   fonts.fontconfig = {
     enable = true;

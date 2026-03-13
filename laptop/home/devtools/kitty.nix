@@ -7,7 +7,7 @@
       TERM = "xterm-256color";
     };
     font = {
-      name = "CaskaydiaMono Nerd Font Mono";
+      name = "IosevkaTerm Nerd Font";
       size = 12.0;
     };
     settings = {

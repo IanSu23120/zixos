@@ -7,6 +7,7 @@
 
     ./fcitx5.nix
     "${inputs.self}/emacs/emacs.nix"
+    "${inputs.self}/nvim/nvim.nix"
   ];
 
   home.username = "zenthus";

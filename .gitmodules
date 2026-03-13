@@ -1,3 +1,6 @@
 [submodule "emacs"]
 	path = emacs
 	url = ./emacs
+[submodule "nvim"]
+	path = nvim
+	url = ./nvim/

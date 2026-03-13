@@ -1,5 +1,5 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
+  # 開機動畫
   boot = {
     plymouth = {
       enable = true;
@@ -8,8 +8,10 @@
     };
   };
 
+  # 登入session
   services.displayManager.ly.enable = true;
 
+  # windowManager
   services.xserver = {
     enable = true;
     windowManager.i3 = {
@@ -19,11 +21,20 @@
   };
   services.libinput.enable = true;
   programs.i3lock.enable = true;
-  programs.light.enable = true;
+  programs.light.enable = true; # 亮度控制
+
+  # file-explorer
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs; [
+      thunar-archive-plugin
+      thunar-volman
+    ];
+  };
 
   services.dbus = {
     enable = true;
-    packages = [ pkgs.dconf ];
+    packages = [pkgs.dconf];
   };
 
   services.picom = {
@@ -48,7 +59,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-gnome ];
+    extraPortals = with pkgs; [xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-gnome];
     config = {
       common = {
         default = [
@@ -57,8 +68,8 @@
         ];
       };
       i3 = {
-        default = [ "gtk" "gnome" ];
-        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+        default = ["gtk" "gnome"];
+        "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
       };
     };
   };
@@ -72,13 +83,14 @@
     GLFW_IM_MODULE = "ibus";
   };
   environment.systemPackages = with pkgs; [
-     gnome-keyring
+    gnome-keyring
 
     adwaita-icon-theme
     feh
-    
+
     pavucontrol
 
     xclip
+    unzip
   ];
 }
