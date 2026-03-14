@@ -1,6 +1,6 @@
 [submodule "emacs"]
 	path = emacs
-	url = ./emacs
+	url = https://github.com/ZenthusSu111/emacs.git
 [submodule "nvim"]
 	path = nvim
-	url = ./nvim/
+	url = https://github.com/ZenthusSu111/nvim.git
