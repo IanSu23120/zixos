@@ -8,7 +8,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -16,14 +23,18 @@
     home-manager,
     nix-flatpak,
     nixos-hardware,
+    sops-nix,
+    disko,
     ...
-  } @inputs: {
+  } @ inputs: {
     nixosConfigurations.zix = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
         nixos-hardware.nixosModules.asus-rog-gl552vw
+        disko.nixosModules.disko
+        sops-nix.nixosModules.sops
         ./laptop/device
         ./laptop/wm
         home-manager.nixosModules.home-manager
