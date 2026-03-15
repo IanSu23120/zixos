@@ -1,18 +1,5 @@
-{
-  pkgs,
-  username,
-  ...
-}: {
-  networking.hostName = "zix";
-  users.users.${username} = {
-    shell = pkgs.nushell;
-    isNormalUser = true;
-    description = "IanSu";
-    extraGroups = ["networkmanager" "wheel" "video"];
-  };
-
+{...}: {
   nixpkgs.config.allowUnfree = true;
-
   system.stateVersion = "25.11";
   nix = {
     settings = {
