@@ -11,6 +11,7 @@
     ./config
 
     ./fcitx5.nix
+	./sops.nix
     "${inputs.emacs-config}/emacs.nix"
     "${inputs.nvim-config}/nvim.nix"
   ];

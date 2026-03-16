@@ -1,3 +1,4 @@
+# manage system root and user password
 {
   inputs,
   username,
@@ -14,9 +15,4 @@
     neededForUsers = true;
   };
 
-  sops.secrets."github_private_key" = {
-    path = "/home/${username}/.ssh/id_ed25519";
-    owner = "${username}";
-    mode = "0600";
-  };
 }

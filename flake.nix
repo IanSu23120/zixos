@@ -57,6 +57,9 @@
             extraSpecialArgs = {
               inherit inputs username;
             };
+			sharedModules = [
+			  inputs.sops-nix.homeManagerModules.sops
+			];
           };
         }
       ];
