@@ -16,7 +16,6 @@ focus_follows_mouse no
 ### binding
 set $mod Mod4
 
-bindsym $mod+F1 exec --no-startup-id "pkill fcitx5 || fcitx5"
 bindsym $mod+braceleft exec --no-startup-id light -U 10
 bindsym $mod+braceright exec --no-startup-id light -A 10
 
