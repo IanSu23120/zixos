@@ -6,14 +6,13 @@
   ...
 }: {
   imports = [
-    ./applications
-    ./devtools
+    ./packages
     ./config
 
     ./fcitx5.nix
-	./sops.nix
-    "${inputs.emacs-config}/emacs.nix"
-    "${inputs.nvim-config}/nvim.nix"
+    ./sops.nix
+   # "${inputs.emacs-config}/emacs.nix"
+   # "${inputs.nvim-config}/nvim.nix"
   ];
 
   home.username = username;
@@ -33,6 +32,7 @@
 
   xdg.userDirs = {
     enable = true;
+    setSessionVariables = true;
     createDirectories = false;
     desktop = null;
     documents = null;

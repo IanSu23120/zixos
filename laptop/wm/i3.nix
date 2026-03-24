@@ -21,7 +21,6 @@
   };
   services.libinput.enable = true;
   programs.i3lock.enable = true;
-  programs.light.enable = true; # 亮度控制
 
   # file-explorer
   programs.thunar = {
@@ -49,7 +48,7 @@
       menuOpacity = 1.0;
 
       settings = {
-        use-damage = true;
+        use-damage = false;
         unredir-if-possible = false;
       };
     };
@@ -90,6 +89,8 @@
     GLFW_IM_MODULE = "ibus";
   };
   environment.systemPackages = with pkgs; [
+    brightnessctl
+
     gnome-keyring
 
     adwaita-icon-theme

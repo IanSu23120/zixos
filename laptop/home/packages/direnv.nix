@@ -1,16 +1,5 @@
-{pkgs, ...}:
+{...}:
 {
-  imports = [
-    ./git.nix
-    ./kitty.nix
-  ];
-  home.packages = with pkgs; [
-    nixd
-    alejandra
-    lua-language-server
-    stylua
-  ];
-
   programs = {
     direnv = {
       enable = true;
