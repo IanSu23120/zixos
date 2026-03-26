@@ -1,10 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # 開機動畫
   boot = {
     plymouth = {
       enable = true;
       theme = "catppuccin-mocha";
-      themePackages = [(pkgs.catppuccin-plymouth.override {variant = "mocha";})];
+      themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
     };
   };
 
@@ -34,7 +35,7 @@
   services = {
     dbus = {
       enable = true;
-      packages = [pkgs.dconf];
+      packages = [ pkgs.dconf ];
     };
 
     picom = {
@@ -65,7 +66,10 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-gnome];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
+    ];
     config = {
       common = {
         default = [
@@ -74,8 +78,11 @@
         ];
       };
       i3 = {
-        default = ["gtk" "gnome"];
-        "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
+        default = [
+          "gtk"
+          "gnome"
+        ];
+        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
       };
     };
   };
@@ -99,6 +106,8 @@
     pavucontrol
 
     xclip
+
+    p7zip
     unzip
   ];
 }
