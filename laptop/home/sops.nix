@@ -8,7 +8,8 @@
 }:
 let
   sshPath = "${config.home.homeDirectory}";
-in{
+in
+{
   sops = {
     age.keyFile = "/etc/age-key.txt";
     defaultSopsFile = "${inputs.self}/secrets/laptop.yaml";

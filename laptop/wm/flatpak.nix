@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
   services.flatpak = {
     enable = true;
@@ -7,5 +7,5 @@
       "com.discordapp.Discord"
       "com.spotify.Client"
     ];
- };
+  };
 }

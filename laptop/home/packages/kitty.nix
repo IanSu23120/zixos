@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
   programs.kitty = {
     enable = true;
@@ -7,7 +7,7 @@
       TERM = "xterm-256color";
     };
     font = {
-      name = "IosevkaTerm Nerd Font";
+      name = "ComicShannsMonoNerdFont";
       size = 12.0;
     };
     settings = {

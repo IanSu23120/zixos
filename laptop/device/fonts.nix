@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -17,16 +17,24 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    nerd-fonts.iosevka
-    nerd-fonts.iosevka-term
+    nerd-fonts.comic-shanns-mono
   ];
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      sansSerif = ["Noto Sans CJK TC" "Noto Sans"];
-      serif = ["Noto Serif CJK TC" "Noto Serif"];
-      monospace = ["Noto Sans Mono CJK TC" "Noto Sans Mono"];
-      emoji = ["Noto Color Emoji"];
+      sansSerif = [
+        "Noto Sans CJK TC"
+        "Noto Sans"
+      ];
+      serif = [
+        "Noto Serif CJK TC"
+        "Noto Serif"
+      ];
+      monospace = [
+        "Noto Sans Mono CJK TC"
+        "Noto Sans Mono"
+      ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
 }

@@ -19,7 +19,7 @@ set $mod Mod4
 bindsym $mod+braceleft exec --no-startup-id brightnessctl set 10%-
 bindsym $mod+braceright exec --no-startup-id brightnessctl set 10%+
 
-bindsym $mod+t exec kitty
+bindsym $mod+t exec alacritty
 
 bindsym $mod+q kill
 
@@ -74,6 +74,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+q exit
 
 
 ### binding end

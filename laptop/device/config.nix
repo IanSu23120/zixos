@@ -1,9 +1,13 @@
-{...}: {
+{ ... }:
+{
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
   nix = {
     settings = {
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       substituters = [
         "http://nix-community.cachix.org"
       ];

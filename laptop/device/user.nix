@@ -3,7 +3,8 @@
   pkgs,
   username,
   ...
-}: {
+}:
+{
   networking.hostName = "zix";
   users.mutableUsers = false;
   users.users."root" = {
@@ -17,7 +18,11 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "${username}";
-    extraGroups = ["networkmanager" "wheel" "video"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+    ];
   };
   programs.zsh.enable = true;
 

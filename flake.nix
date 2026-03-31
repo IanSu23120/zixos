@@ -26,43 +26,46 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    nix-flatpak,
-    nixos-hardware,
-    sops-nix,
-    disko,
-    ...
-  } @ inputs: let
-    username = "iansu";
-  in {
-    nixosConfigurations.zix = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs username;};
-      modules = [
-        nix-flatpak.nixosModules.nix-flatpak
-        nixos-hardware.nixosModules.asus-rog-gl552vw
-        disko.nixosModules.disko
-        sops-nix.nixosModules.sops
-        ./laptop/device
-        ./laptop/wm
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            backupFileExtension = "backup";
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.${username} = ./laptop/home;
-            extraSpecialArgs = {
-              inherit inputs username;
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nix-flatpak,
+      nixos-hardware,
+      sops-nix,
+      disko,
+      ...
+    }@inputs:
+    let
+      username = "iansu";
+    in
+    {
+      nixosConfigurations.zix = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs username; };
+        modules = [
+          nix-flatpak.nixosModules.nix-flatpak
+          nixos-hardware.nixosModules.asus-rog-gl552vw
+          disko.nixosModules.disko
+          sops-nix.nixosModules.sops
+          ./laptop/device
+          ./laptop/wm
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              backupFileExtension = "backup";
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${username} = ./laptop/home;
+              extraSpecialArgs = {
+                inherit inputs username;
+              };
+              sharedModules = [
+                inputs.sops-nix.homeManagerModules.sops
+              ];
             };
-			sharedModules = [
-			  inputs.sops-nix.homeManagerModules.sops
-			];
-          };
-        }
-      ];
+          }
+        ];
+      };
     };
-  };
 }

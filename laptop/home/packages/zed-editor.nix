@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -13,7 +13,7 @@
     userSettings = {
       theme = "One Dark";
     };
-    extraPackages = with pkgs;[
+    extraPackages = with pkgs; [
       nixd
       lua-language-server
     ];

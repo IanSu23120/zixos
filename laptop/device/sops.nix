@@ -3,7 +3,8 @@
   inputs,
   username,
   ...
-}: {
+}:
+{
   sops.defaultSopsFile = "${inputs.self}/secrets/laptop.yaml";
   sops.age.keyFile = "/etc/age-key.txt";
   sops.age.generateKey = false;
