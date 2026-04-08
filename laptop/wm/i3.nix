@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   # 開機動畫
   boot = {
@@ -18,6 +18,7 @@
     windowManager.i3 = {
       enable = true;
       updateSessionEnvironment = true;
+      configFile = "${inputs.self}/laptop/home/config/i3/config";
     };
   };
   services.libinput.enable = true;

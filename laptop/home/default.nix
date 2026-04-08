@@ -8,7 +8,7 @@
 {
   imports = [
     ./packages
-    ./config
+    # ./config
 
     ./fcitx5.nix
     ./sops.nix

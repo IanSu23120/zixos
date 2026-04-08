@@ -5,6 +5,7 @@
     ./bootloader.nix
     ./config.nix
     ./disko.nix
+    ./driver.nix
     ./fonts.nix
     ./hardware-configuration.nix
     ./network.nix

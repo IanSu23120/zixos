@@ -9,7 +9,7 @@
       };
       font = {
         normal = {
-          family = "ComicShannsMonoNerdFont";
+          family = "IosevkaTerm Nerd Font Mono";
         };
         size = 12.0;
       };

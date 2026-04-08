@@ -2,11 +2,11 @@
   description = "my nixos config";
   inputs = {
     emacs-config = {
-      url = "github:ZenthusSu111/emacs";
+      url = "github:IanSu23120/emacs";
       flake = false;
     };
     nvim-config = {
-      url = "github:ZenthusSu111/nvim";
+      url = "github:IanSu23120/nvim";
       flake = false;
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -24,6 +24,10 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,6 +38,7 @@
       nixos-hardware,
       sops-nix,
       disko,
+      niri-flake,
       ...
     }@inputs:
     let

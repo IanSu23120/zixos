@@ -17,7 +17,7 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    nerd-fonts.comic-shanns-mono
+    nerd-fonts.iosevka-term
   ];
   fonts.fontconfig = {
     enable = true;
