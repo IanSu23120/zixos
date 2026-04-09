@@ -24,10 +24,6 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri-flake = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -38,7 +34,6 @@
       nixos-hardware,
       sops-nix,
       disko,
-      niri-flake,
       ...
     }@inputs:
     let
@@ -50,7 +45,7 @@
         specialArgs = { inherit inputs username; };
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          nixos-hardware.nixosModules.asus-rog-gl552vw
+          # nixos-hardware.nixosModules.asus-rog-gl552vw
           disko.nixosModules.disko
           sops-nix.nixosModules.sops
           ./laptop/device

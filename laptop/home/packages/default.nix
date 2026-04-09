@@ -10,8 +10,6 @@
     ./tmux.nix
     ./zed-editor.nix
     ./zsh.nix
-
-    ./niri.nix
   ];
   home.packages = with pkgs; [
     devenv

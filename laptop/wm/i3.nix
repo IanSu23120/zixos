@@ -18,7 +18,6 @@
     windowManager.i3 = {
       enable = true;
       updateSessionEnvironment = true;
-      configFile = "${inputs.self}/laptop/home/config/i3/config";
     };
   };
   services.libinput.enable = true;
@@ -97,6 +96,7 @@
     GLFW_IM_MODULE = "ibus";
   };
   environment.systemPackages = with pkgs; [
+    perl5Packages.Apppapersway
     brightnessctl
 
     gnome-keyring

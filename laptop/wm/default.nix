@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./niri.nix
+    ./i3.nix
     ./flatpak.nix
   ];
 }

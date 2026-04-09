@@ -8,12 +8,14 @@
 {
   imports = [
     ./packages
-    # ./config
+    ./config/link.nix
 
     ./fcitx5.nix
     ./sops.nix
     # "${inputs.emacs-config}/emacs.nix"
     # "${inputs.nvim-config}/nvim.nix"
+
+    # ./niri
   ];
 
   home.username = username;
