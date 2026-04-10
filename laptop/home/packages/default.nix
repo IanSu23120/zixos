@@ -4,7 +4,7 @@
     ./alacritty.nix
     ./apps.nix
     ./browser.nix
-    ./direnv.nix
+    # ./direnv.nix
     ./git.nix
     ./kitty.nix
     ./starship.nix
@@ -13,6 +13,11 @@
     ./zsh.nix
   ];
   home.packages = with pkgs; [
+    direnv
     devenv
+
+    rustdesk-flutter
+    discord
+    spotify
   ];
 }
