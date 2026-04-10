@@ -16,4 +16,12 @@
       ];
     };
   };
+  programs.nh = {
+    enable = true;
+    flake = "/home/iansu/zixos";
+    clean = {
+      enable = true;
+      extraArgs = "--keep-since 4d --keep 3";
+    };
+  };
 }

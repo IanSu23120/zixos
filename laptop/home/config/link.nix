@@ -4,6 +4,8 @@ let
 in
 {
   xdg.configFile."i3".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/i3";
+  xdg.configFile."starship.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${configPath}/starship/starship.toml";
   # xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/niri";
   # xdg.configFile."xdg-desktop-portal".source =
   # config.lib.file.mkOutOfStoreSymlink "${configPath}/niri/xdg-desktop-portal";

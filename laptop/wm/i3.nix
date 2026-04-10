@@ -2,11 +2,17 @@
 {
   # 開機動畫
   boot = {
+    kernelParams = [
+      "quiet"
+      "splash"
+    ];
     plymouth = {
       enable = true;
       theme = "catppuccin-mocha";
       themePackages = [ (pkgs.catppuccin-plymouth.override { variant = "mocha"; }) ];
     };
+    # 用intel gpu渲染
+    initrd.kernelModules = [ "i915" ];
   };
 
   # 登入session
@@ -68,7 +74,7 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
+      xdg-desktop-portal-gnome
     ];
     config = {
       common = {

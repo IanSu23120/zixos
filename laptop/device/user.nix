@@ -22,6 +22,7 @@
       "networkmanager"
       "wheel"
       "video"
+      "seat"
     ];
   };
   programs.zsh.enable = true;

@@ -21,22 +21,6 @@
         "type": "github"
       }
     },
-    "emacs-config": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1773901056,
-        "narHash": "sha256-85lqHz6/Gxpmq9a2R5PICkFk8PN1h0rD//dyRxrT4Fg=",
-        "owner": "IanSu23120",
-        "repo": "emacs",
-        "rev": "5141bdaf7506e01437d8f1fee3583002317afa09",
-        "type": "github"
-      },
-      "original": {
-        "owner": "IanSu23120",
-        "repo": "emacs",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -72,22 +56,6 @@
         "type": "github"
       }
     },
-    "nixos-hardware": {
-      "locked": {
-        "lastModified": 1775490113,
-        "narHash": "sha256-2ZBhDNZZwYkRmefK5XLOusCJHnoeKkoN95hoSGgMxWM=",
-        "owner": "NixOS",
-        "repo": "nixos-hardware",
-        "rev": "c775c2772ba56e906cbeb4e0b2db19079ef11ff7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixos-hardware",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1775423009,
@@ -104,31 +72,12 @@
         "type": "github"
       }
     },
-    "nvim-config": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1773408337,
-        "narHash": "sha256-Ou/4uO8le4UIy6PkqUsVZEdjpCFqaROYonKpnHW6yG8=",
-        "owner": "IanSu23120",
-        "repo": "nvim",
-        "rev": "64bc56aea8ff85fd9a40f68e2382483c7df9ec16",
-        "type": "github"
-      },
-      "original": {
-        "owner": "IanSu23120",
-        "repo": "nvim",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "disko": "disko",
-        "emacs-config": "emacs-config",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
-        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
-        "nvim-config": "nvim-config",
         "sops-nix": "sops-nix"
       }
     },

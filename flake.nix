@@ -1,21 +1,12 @@
 {
   description = "my nixos config";
   inputs = {
-    emacs-config = {
-      url = "github:IanSu23120/emacs";
-      flake = false;
-    };
-    nvim-config = {
-      url = "github:IanSu23120/nvim";
-      flake = false;
-    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +22,6 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      nixos-hardware,
       sops-nix,
       disko,
       ...
@@ -45,7 +35,6 @@
         specialArgs = { inherit inputs username; };
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          # nixos-hardware.nixosModules.asus-rog-gl552vw
           disko.nixosModules.disko
           sops-nix.nixosModules.sops
           ./laptop/device
