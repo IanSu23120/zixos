@@ -10,4 +10,5 @@ in
   # xdg.configFile."xdg-desktop-portal".source =
   # config.lib.file.mkOutOfStoreSymlink "${configPath}/niri/xdg-desktop-portal";
   # xdg.configFile."rofi".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/rofi";
+  xdg.configFile."quickshell".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/quickshell";
 }

@@ -7,6 +7,7 @@
     ./direnv.nix
     ./git.nix
     ./kitty.nix
+    ./quickshell.nix
     ./starship.nix
     ./tmux.nix
     ./vscode.nix
