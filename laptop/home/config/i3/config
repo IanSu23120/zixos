@@ -23,6 +23,8 @@ bindsym $mod+l exec papersway-msg focus right
 
 # startup apps and window decs
 default_orientation auto
+default_border pixel 0
+default_floating_border pixel 0
 workspace_layout default
 
 # window colours: border background text
